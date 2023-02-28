@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: center;
+
+  padding-top: 200px;
+}
+
+#carousel {
+  position: relative;
+}
+
+#up-arrow {
+  position: absolute;
+  padding: 5px;
+  border-radius: 50%;
+
+  top: 8px;
+  left: 50%;
+
+  background-color:#cccccc;
+}
+
+#down-arrow {
+  position: absolute;
+  padding: 5px;
+  border-radius: 50%;
+
+  bottom: 8px;
+  left: 50%;
+
+  background-color: #cccccc;
+}
+
+#carousel-active-img {
+  max-height: 300px;
+  
+}
+
+#dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  position: absolute;
+
+  width: 100%;
+  bottom: 10px;
+}
+
+#dots-container .dot {
+  width: 8px;
+  height: 8px;
+
+  background-color: rgba(255,255,255,0.4);
+  border: 1px solid white;
+
+  border-radius: 50%;
+}
+
+#dots-container .dot.active {
+  background-color: rgba(255,255,255,1);
+}
