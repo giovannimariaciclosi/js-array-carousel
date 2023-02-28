@@ -56,18 +56,17 @@ downArrowElement.addEventListener("click", function () {
   //   ° aumentare il valore dell'indice di un'unità
   index++;
   // dotElements[index].classList.add("active");
+  
+  // metodo non funzionante
+  if (index > 4) {
+    index = 0;
+  }
 
   //   ° mostrare l'immagine alla posizione dell'array relativa al valore dell'indice
   activeImgElement.src = images[index];
 
   console.log(index)
 
-  // metodo non funzionante
-  if (index > 4) {
-    activeImgElement.src = images[0];
-  } else if (index < 0) {
-    activeImgElement.src = images[4];
-  }
 
   // aggiungiamo la classe active al pallino corrispondente all'indice
   // dotElements[index - 1].classList.remove("active");
@@ -76,10 +75,12 @@ downArrowElement.addEventListener("click", function () {
 
 
 upArrowElement.addEventListener("click", function () {
-  
   //   ° diminuire il valore dell'indice di un'unità
   index--;
   // dotElements[index].classList.add("active");
+  if (index < 0) {
+    index = 4;
+  }
 
   //   ° mostrare l'immagine alla posizione dell'array relativa al valore dell'indice
   activeImgElement.src = images[index];
