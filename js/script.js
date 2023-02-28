@@ -63,9 +63,11 @@ downArrowElement.addEventListener("click", function () {
   console.log(index)
 
   // metodo non funzionante
-  // if (index > 4) {
-  //   index == 0;
-  // }
+  if (index > 4) {
+    activeImgElement.src = images[0];
+  } else if (index < 0) {
+    activeImgElement.src = images[4];
+  }
 
   // aggiungiamo la classe active al pallino corrispondente all'indice
   // dotElements[index - 1].classList.remove("active");
