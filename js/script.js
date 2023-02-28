@@ -46,13 +46,10 @@ let index = 0;
 // inizio inserendo dentro il parametro src il valore della prima immagine dall'array
 activeImgElement.src = images[index];
 
-
 // prendo tutti i dots
 // const dotElements = document.querySelectorAll('.dot');
 // aggiungo al primo la classe "active"
 // dotElements[index].classList.add("active");
-
-
 
 downArrowElement.addEventListener("click", function () {
 
@@ -60,13 +57,16 @@ downArrowElement.addEventListener("click", function () {
   index++;
   // dotElements[index].classList.add("active");
 
-
   //   ° mostrare l'immagine alla posizione dell'array relativa al valore dell'indice
   activeImgElement.src = images[index];
 
   console.log(index)
 
-  
+  // metodo non funzionante
+  // if (index > 4) {
+  //   index == 0;
+  // }
+
   // aggiungiamo la classe active al pallino corrispondente all'indice
   // dotElements[index - 1].classList.remove("active");
 
@@ -79,13 +79,11 @@ upArrowElement.addEventListener("click", function () {
   index--;
   // dotElements[index].classList.add("active");
 
-
   //   ° mostrare l'immagine alla posizione dell'array relativa al valore dell'indice
   activeImgElement.src = images[index];
 
   console.log(index)
 
-  
   // aggiungiamo la classe active al pallino corrispondente all'indice
   // dotElements[index + 1].classList.remove("active");
 
